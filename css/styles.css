@@ -30,7 +30,8 @@ img{
 button{cursor: pointer;}
 
 .link-color{color: #2E2F42;}
-.link-color:active{color: #404BBF}
+.link-color:is(:hover, :focus, :active)
+{color: #404BBF}
 
 /* _________________________________________________________NAVi */
 .page-header{
@@ -106,12 +107,17 @@ color: #2E2F42;
 
 .for-background{
     background: var(--second-title);}
+
 .title-hero {
     text-align: center;
+    width: 496px;
+    height: 120px;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
 
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 48px;
 
     color: #FFFFFF;}
@@ -157,6 +163,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: #404BBF;
     color: var(--text-button);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-color: #404BBF;
 }
 
 .list-buttons{
@@ -181,18 +188,19 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding-bottom: 32px;
     padding-left: 16px;
     border: 1px solid #E7E9FC;
-border-top: none;}
+    border-top: none;}
 
 .photo-item{
-    width: calc((100% - 2 * 24px) / 3 );
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .photo-item-link{
     cursor: pointer;
+    width: calc((100% - 2 * 24px) / 3 );
+
 }
 .photo-item:hover,
 .photo-item:focus {
-    border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);}
 
 
@@ -224,6 +232,7 @@ border-top: none;}
 .advantages-icon-box{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 264px;
     height: 112px;
     background-color: #F4F4FD;
@@ -354,13 +363,19 @@ border-radius: 0px 0px 4px 4px;}
     padding-top: 130px;
 }
 
+
 .customers-icon-list-item{
+}
 
-Width: calc((100% - 24px * 5) / 6);
-Height: 88px;
-
-border: 1px solid #8E8F99;
-border-radius: 4px;}
+.customers-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    width: 168px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+}
 
 .customers-icon-list{
     display: flex;
@@ -370,14 +385,19 @@ border-radius: 4px;}
 }
 
 
-.customers-icon-list > li{
-    display: flex;
-    justify-content: center;
-    align-items: center;}
-
 .icon-compani{
-    fill: #8E8F99;
+    align-items: center;
+    fill: #8E8F99
 }
+
+.customers-link:is(:hover, :focus){
+    border-color: #404BBF;}
+
+.customers-link:is(:hover, :focus) .icon-compani{
+    fill: #404BBF;
+}
+
+
 
 /* ________________________________________________________FOOTER */
 .footer {
