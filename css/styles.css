@@ -141,12 +141,13 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 /* portfolio ======================================= */
 .buttons {
     padding: 12px 24px;
-font-family: inherit;
+    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.04em;
+
     color: #4D5AE5;
     border: 1px solid #E7E9FC;
     border-radius: 4px;}
@@ -158,7 +159,6 @@ font-family: inherit;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* .button-section{background-color: aqua;} */
 .list-buttons{
 
     margin-bottom: 72px;
@@ -185,13 +185,17 @@ border-top: none;}
 
 .photo-item{
     width: calc((100% - 2 * 24px) / 3 );
+}
+
+.photo-item-link{
     cursor: pointer;
 }
-.photo-item:hover{border: 0.5px solid #F4F4FD;
+.photo-item:hover,
+.photo-item:focus {
+    border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);}
 
-.photo-item:focus{border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);}    
+
     /* ======================================================== */
 
 /* ________________________________________________________SECT2 */
@@ -382,6 +386,7 @@ border-radius: 4px;}
 }
 .footer-flex{
     display: flex;
+    align-items: baseline;
     gap: 120px;
 }
 .footer-text{
